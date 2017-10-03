@@ -35,6 +35,7 @@
   <strong>Category:</strong>
   <%= @product.category_id %>
 </p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
+<% if can? :update, Product %>
+<%= link_to 'Edit', edit_product_path(@product) %>
+ |<% end %>
 <%= link_to 'Back', products_path %>

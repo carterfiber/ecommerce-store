@@ -1,0 +1,11 @@
+<h1>Edit Users</h1>
+
+<tbody>
+		<% @users.each do |x| %>
+		<tr>
+			<td> <%= x.email %></td>
+			<td> <%= x.role %> </td>
+			<td> <%= link_to "Edit", edit_user_path(x.id), class: "btn btn-warning" %> </td>
+		</tr>
+		<% end %>
+	</tbody>

@@ -1,0 +1,30 @@
+<% if can? :update, Product %>
+<h1>Here is a list of Users:</h1>
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Email</th>
+			<th>Role</th>
+		</tr>
+	</thead>
+
+	<tbody>
+<% @users.each do |u| %>
+	<tr>
+		<td><%= u.email %></td>
+		<td><%= u.role.upcase %></td>
+		<td><%= u.id %></td>
+		<td><%= link_to "Select User", show_user_path(id: u.id), class: "btn btn-warning" %></td>
+<% end %>
+	</tr>
+	</tbody>
+</table>
+
+<% else %>
+<center><h1>Access Denied!</h1></center>
+
+<% end %>
+
+<%= link_to "Home", root_path, class: "btn btn-danger" %>
