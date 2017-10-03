@@ -15,4 +15,9 @@ class AdminController < ApplicationController
   def show_user
   	@user = User.find(params[:id])
   end
+
+  def delete_user
+    @user = User.find(params[:id].to_i)
+    
+  end
 end
