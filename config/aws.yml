@@ -1,0 +1,4 @@
+# RAILS_ROOT/config/aws.yml
+development:
+  access_key_id: AKIAJJL4DAS6GP4AQ4PA
+  secret_access_key: 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
